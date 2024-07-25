@@ -63,4 +63,4 @@ This repository is licensed under the MIT License. See the LICENSE.md for more d
 
 ---
 
-This version now solely emphasizes data analytics and computer vision, making it more focused on these specific areas.
+This repository solely emphasizes data analytics and computer vision, making it more focused on these specific areas.
