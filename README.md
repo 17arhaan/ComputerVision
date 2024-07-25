@@ -1,10 +1,8 @@
 <h1>
   Welcome to The Python Repository!
 </h1>
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <img src="https://miro.medium.com/v2/resize:fit:1400/0*tD5kEC2JYcKHH0zO.gif">
-
-<img src="https://media.licdn.com/dms/image/D4D12AQFdPSdsKIbf3Q/article-cover_image-shrink_720_1280/0/1693213036554?e=2147483647&v=beta&t=ttfAs1qRT8yukeU3V4xj7G5wLyVmb6Qfpye1qYmpbmM">
-
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <h3>Data Analytics in Python</h3>
