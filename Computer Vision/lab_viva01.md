@@ -1,4 +1,4 @@
-#Lab 02
+# Lab 02
 
 ### **Section 1: Basic Understanding**
 
