@@ -1,4 +1,4 @@
-#!Lab 02
+#Lab 02
 
 ### **Section 1: Basic Understanding**
 
@@ -142,7 +142,7 @@
    - Implement histogram equalization by stretching the image’s intensity range to cover the full scale. Use functions like `cv2.equalizeHist()` for grayscale images and apply similar techniques to each color channel for RGB images.
 
 
-#! Lab 03
+# Lab 03
 
 
 ### **Section 1: Basic Understanding**
@@ -267,7 +267,7 @@
 5. **If user input for filter parameters causes unexpected behavior, how would you resolve it?**
    - Validate user input to ensure it falls within acceptable ranges. Provide default values or constraints to prevent invalid configurations and handle exceptions if input values are out of range.
 
-#! Lab 04
+# Lab 04
 
 ### **Section 1: Basic Understanding**
 
