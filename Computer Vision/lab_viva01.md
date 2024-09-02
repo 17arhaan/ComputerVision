@@ -370,3 +370,130 @@
 
 5. **How would you address potential performance bottlenecks in real-time video processing?**
    - Optimize code for efficiency, use hardware acceleration if available, and consider reducing video resolution or frame rate to manage performance.
+
+Here’s a detailed questionnaire for the last two code snippets you provided, focusing on image processing using OpenCV:
+
+---
+
+## **Questionnaire for Code 1: Thresholding an Image Using OpenCV**
+
+### **Questions and Answers:**
+
+1. **What is the purpose of this code?**
+   - The code reads an image, converts it to grayscale, and applies binary thresholding based on a user-defined threshold value. The resulting binary image is saved to a file and displayed to the user.
+
+2. **What does `cv2.imread()` do in this code?**
+   - The `cv2.imread()` function reads an image from the specified file path (`image_path`) and stores it in the `image` variable. The `cv2.IMREAD_COLOR` flag specifies that the image is read in color mode (default).
+
+3. **Why is the image converted to grayscale, and how is it done?**
+   - The image is converted to grayscale using `cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)`. Grayscale conversion is needed because thresholding is typically applied to single-channel images to simplify the process.
+
+4. **What is thresholding, and how is it implemented in this code?**
+   - Thresholding is a technique to segment an image by setting pixel values above a certain threshold to a maximum value (white) and below the threshold to a minimum value (black). In the code, `cv2.threshold()` is used to perform binary thresholding:
+     - `gray_image` is the input image.
+     - `threshold_value` is the threshold value set by the user.
+     - `max_value = 255` is the maximum value to use with `cv2.THRESH_BINARY`.
+     - The function returns `binary_image` where pixel values are set to 0 or 255.
+
+5. **What happens if the user provides an invalid threshold value?**
+   - If the threshold value is not an integer between 0 and 255, the code raises a `ValueError`, which is caught by the `try-except` block, and an error message is printed.
+
+6. **How is the binary image saved, and in which format?**
+   - The binary image is saved using `cv2.imwrite(output_path, binary_image)`. It is saved in JPEG format as specified by the `output_path`.
+
+7. **What functions are used to display the image, and how do they work?**
+   - `cv2.imshow()` displays the image in a window titled `'Binary Image'`.
+   - `cv2.waitKey(0)` waits indefinitely for a key press to close the window.
+   - `cv2.destroyAllWindows()` closes all OpenCV windows.
+
+8. **What is the difference between binary and grayscale images?**
+   - A **grayscale image** has pixel values ranging from 0 (black) to 255 (white), representing different shades of gray. A **binary image** has only two pixel values: 0 (black) and 255 (white).
+
+9. **Why do we need to handle user input for the threshold value carefully?**
+   - The threshold value must be within the range [0, 255] to correctly apply the binary thresholding. Any other value is invalid, which could lead to runtime errors or incorrect processing.
+
+10. **What would happen if you remove the `cv2.destroyAllWindows()` function?**
+    - The image display window would remain open, and the program would not exit properly.
+
+_________
+
+1. **What is the purpose of this code?**
+   - The code reads an image, converts it to grayscale, and applies binary thresholding based on a user-defined threshold value. The resulting binary image is saved to a file and displayed to the user.
+
+2. **What does `cv2.imread()` do in this code?**
+   - The `cv2.imread()` function reads an image from the specified file path (`image_path`) and stores it in the `image` variable. The `cv2.IMREAD_COLOR` flag specifies that the image is read in color mode (default).
+
+3. **Why is the image converted to grayscale, and how is it done?**
+   - The image is converted to grayscale using `cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)`. Grayscale conversion is needed because thresholding is typically applied to single-channel images to simplify the process.
+
+4. **What is thresholding, and how is it implemented in this code?**
+   - Thresholding is a technique to segment an image by setting pixel values above a certain threshold to a maximum value (white) and below the threshold to a minimum value (black). In the code, `cv2.threshold()` is used to perform binary thresholding:
+     - `gray_image` is the input image.
+     - `threshold_value` is the threshold value set by the user.
+     - `max_value = 255` is the maximum value to use with `cv2.THRESH_BINARY`.
+     - The function returns `binary_image` where pixel values are set to 0 or 255.
+
+5. **What happens if the user provides an invalid threshold value?**
+   - If the threshold value is not an integer between 0 and 255, the code raises a `ValueError`, which is caught by the `try-except` block, and an error message is printed.
+
+6. **How is the binary image saved, and in which format?**
+   - The binary image is saved using `cv2.imwrite(output_path, binary_image)`. It is saved in JPEG format as specified by the `output_path`.
+
+7. **What functions are used to display the image, and how do they work?**
+   - `cv2.imshow()` displays the image in a window titled `'Binary Image'`.
+   - `cv2.waitKey(0)` waits indefinitely for a key press to close the window.
+   - `cv2.destroyAllWindows()` closes all OpenCV windows.
+
+8. **What is the difference between binary and grayscale images?**
+   - A **grayscale image** has pixel values ranging from 0 (black) to 255 (white), representing different shades of gray. A **binary image** has only two pixel values: 0 (black) and 255 (white).
+
+9. **Why do we need to handle user input for the threshold value carefully?**
+   - The threshold value must be within the range [0, 255] to correctly apply the binary thresholding. Any other value is invalid, which could lead to runtime errors or incorrect processing.
+
+10. **What would happen if you remove the `cv2.destroyAllWindows()` function?**
+    - The image display window would remain open, and the program would not exit properly.
+
+11. **What is the main objective of this code?**
+   - The code reads an image, detects edges using the Canny edge detection algorithm, and then applies the Hough Line Transform to detect straight lines in the image. The detected lines are drawn on the original image and displayed to the user.
+
+12. **What does `cv2.Canny()` function do? What are its parameters?**
+   - The `cv2.Canny()` function detects edges in a grayscale image:
+     - `gray` is the input grayscale image.
+     - `50` and `150` are the lower and upper thresholds for edge detection.
+     - `apertureSize=3` specifies the Sobel kernel size used for computing gradients.
+
+13. **What is the Hough Line Transform, and why is it used?**
+   - The **Hough Line Transform** is a technique to detect straight lines in an image. It transforms points in the image space to a parameter space and looks for intersections that represent lines.
+
+14. **Explain the parameters of the `cv2.HoughLines()` function.**
+   - `cv2.HoughLines()` detects lines in the edge-detected image:
+     - `edges` is the input image (result from the Canny edge detector).
+     - `1` is the distance resolution in pixels.
+     - `np.pi/180` is the angular resolution in radians (1 degree).
+     - `200` is the threshold parameter, which is the minimum number of intersections to detect a line.
+
+15. **How does the code draw detected lines on the image?**
+   - The code converts the polar coordinates `(rho, theta)` of each detected line to Cartesian coordinates and then uses the `cv2.line()` function to draw lines on the original image.
+
+16. **Why do we use trigonometric functions (cos, sin) in line drawing?**
+   - The trigonometric functions `cos(theta)` and `sin(theta)` convert the polar coordinates `(rho, theta)` into Cartesian coordinates to find the endpoints of the line.
+
+17. **What would happen if the `threshold` parameter in `cv2.HoughLines()` is set too low or too high?**
+   - If the `threshold` is set too low, many lines (including noise) will be detected, leading to a cluttered image. If it is too high, fewer lines will be detected, potentially missing significant lines.
+
+18. **What is the role of `cv2.imshow()` in this code?**
+   - `cv2.imshow()` displays the final image with the detected lines in a window titled `'Hough Line Transform'`.
+
+19. **Explain why we use `cv2.waitKey(0)` and `cv2.destroyAllWindows()` at the end of the code.**
+   - `cv2.waitKey(0)` waits for a key event indefinitely, ensuring the displayed image window stays open until a key is pressed. `cv2.destroyAllWindows()` closes all windows to clean up resources and exit the program properly.
+
+20. **What is the purpose of setting `apertureSize=3` in the `cv2.Canny()` function?**
+    - `apertureSize=3` specifies the size of the Sobel kernel (3x3) used for gradient calculation in the Canny edge detection, influencing edge detection accuracy and noise sensitivity.
+
+21. **How would the output change if the `cv2.Canny()` thresholds were set to different values?**
+    - Setting lower thresholds would detect more edges (including noise), while higher thresholds would detect fewer edges, potentially missing important details.
+
+22. **Why are lines drawn in green color `(0, 255, 0)` in `cv2.line()` function?**
+    - The color `(0, 255, 0)` represents green in BGR format, making the detected lines stand out clearly against the background.
+
+# ----- LAB 04 ------
