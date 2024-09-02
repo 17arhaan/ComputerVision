@@ -496,4 +496,4 @@ _________
 22. **Why are lines drawn in green color `(0, 255, 0)` in `cv2.line()` function?**
     - The color `(0, 255, 0)` represents green in BGR format, making the detected lines stand out clearly against the background.
 
-# ----- LAB 04 ------
+# X ----- LAB 04 ----- X
